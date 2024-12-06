@@ -57,18 +57,31 @@ body {
   font-size: 3rem;
 }
 
+.navbar a {
+  padding: 0;
+  margin: 0;
+}
+
+/* To Do - Redo buttons to use button class not button html  */
+
 .navbar button {
-  height: 50%;
+  height: 75%;
   padding: 0.25rem 1rem;
   font-family: "Kanit", sans-serif;
   font-size: 1rem;
   border: 1px solid white;
   border-radius: 5px;
+  cursor: pointer;
+  background: linear-gradient(to bottom, beige 0%, tan 100%) repeat scroll 0 0
+    transparent;
+  text-shadow: 0 1px 1px whitesmoke;
 }
 
 .navbar button:hover {
+  background: none;
   background-color: grey;
   color: white;
+  text-shadow: none;
 }
 
 /* Banner  */
@@ -139,6 +152,7 @@ body {
   padding: 1rem;
   border: 1px solid brown;
   background-image: linear-gradient(to bottom right, whitesmoke, gray);
+  border-radius: 5px;
   /* background-color: silver; */
 }
 
@@ -185,4 +199,16 @@ body {
 .catholder p {
   font-family: "Kanit", sans-serif;
   font-size: 1rem;
+}
+
+/* Footer  */
+
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 2rem auto;
+}
+
+footer h3,
+h4 {
+  padding: 0.25rem;
 }
