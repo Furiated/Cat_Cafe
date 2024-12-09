@@ -99,9 +99,20 @@ body {
   }
 }
 
+@media (max-width: 400px) {
+  .navbar h1 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .navbar .menu {
+    margin-right: 0.5rem;
+  }
+}
+
 /* Banner  */
 
-.banner {
+#banner {
   height: 300px;
   border: 1px solid burlywood;
   background-image: url("images/banner.webp");
@@ -118,31 +129,50 @@ body {
   background-color: beige;
 }
 
-.banner h1,
-.banner h2 {
+#banner h1,
+#banner h2 {
   font-family: "Kanit", sans-serif;
 }
 
-.banner h1 {
+#banner h1 {
   font-size: 5rem;
   line-height: 0.9;
   padding-bottom: 0.5rem;
 }
 
-.banner h2 {
+#banner h2 {
   font-size: 2.5rem;
+}
+
+@media (max-width: 500px) {
+  #banner {
+    height: 200px;
+  }
+
+  .floater {
+    /* display: none; */
+    width: 75%;
+  }
+
+  #banner h1 {
+    font-size: 2.5rem;
+  }
+
+  #banner h2 {
+    font-size: 1.5rem;
+  }
 }
 
 /* About Us  */
 
 .content {
   width: 90%;
-  border: 1px solid red;
   margin: auto;
   text-align: justify;
   padding: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.4;
+  /* border: 1px solid red; */
 }
 
 .content h3 {
@@ -165,23 +195,21 @@ body {
   width: 90%;
   margin: auto;
   padding: 1rem;
-  border: 1px solid brown;
   background-image: linear-gradient(to bottom right, whitesmoke, gray);
   border-radius: 5px;
-  /* background-color: silver; */
+  /* border: 1px solid brown; */
 }
 
 .catholder h2 {
-  /* color: white; */
   font-family: "Kanit", sans-serif;
   font-size: 2rem;
 }
 
 .catlist {
-  border: 1px solid blue;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  /* border: 1px solid blue; */
 }
 
 .cat {
@@ -216,17 +244,30 @@ body {
   font-size: 1rem;
 }
 
+@media (max-width: 768px) {
+  .catholder h2 {
+    font-size: 2.5rem;
+  }
+
+  .catlist {
+    flex-direction: column;
+  }
+
+  .cat {
+    max-width: 400px;
+  }
+}
+
 /* Hours and Location  */
 
 .center {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-end;
   width: 90%;
   margin: auto;
-  /* padding: 1rem; */
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
 }
 
 .center h3,
@@ -236,17 +277,19 @@ h4 {
 
 .center h3 {
   font-size: 1.5rem;
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
 }
 
 .center h4 {
   line-height: 1;
 }
 
+.spacing {
+  padding-bottom: 1rem;
+}
 .hours,
 .location {
   padding: 1rem;
-  /* display: inline-block; */
 }
 
 .hours {
@@ -263,10 +306,16 @@ h4 {
   padding: 0 1.5rem;
 }
 
-/* Review to see if we want to add any further styling to Location or if we should remove this one  */
+@media (max-width: 440px) {
+  .location {
+    width: 90%;
+    /* border: 1px solid black; */
+  }
 
-.location {
-  /* border: 1px dotted lightgray; */
+  .map {
+    overflow: hidden;
+    /* border: 1px solid green; */
+  }
 }
 
 /* Footer  */
