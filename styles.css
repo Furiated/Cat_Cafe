@@ -264,7 +264,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: flex-end;
+  /* align-items: flex-end; */
+  align-items: center;
   width: 90%;
   margin: auto;
   /* border: 1px solid purple; */
@@ -288,7 +289,8 @@ h4 {
   padding-bottom: 1rem;
 }
 .hours,
-.location {
+.location,
+.fact {
   padding: 1rem;
 }
 
@@ -305,6 +307,31 @@ h4 {
   line-height: 1.5;
   padding: 0 1.5rem;
 }
+
+.fact {
+  color: #191919;
+  background-color: gainsboro;
+  border-radius: 5px;
+  border: 3px dashed gray;
+  margin: 1rem 0;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5); /* 2px spread radius */
+  max-width: 16rem;
+  max-height: 18rem;
+}
+
+.fact p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+  line-height: 1.25;
+  padding: 0 1rem;
+}
+
+.fact h4 {
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* TODO: Add an additional breakpoint for when the cat fact drops under Hours and Location but the flexbox has not yet changed to vertical */
 
 @media (max-width: 440px) {
   .location {

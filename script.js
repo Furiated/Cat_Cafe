@@ -3,16 +3,16 @@
 // Initial version will be without imposing a character limit on the returned fact
 
 const url = "https://catfact.ninja/fact";
+const catFactBox = document.getElementById("fact-text");
 
-const catFact = async () => {
+const generateCatFact = async () => {
   try {
     // Fetch a fact from the cat facts site
     const response = await fetch(url);
     // Check that the response is okay
     if (response.ok) {
       const jsonResponse = await response.json();
-      // For now, just log the fact to the console
-      console.log(jsonResponse.fact);
+      catFactBox.innerHTML = `<p>${jsonResponse.fact}</p>`;
     }
     // Log any error to the console
   } catch (error) {
@@ -20,4 +20,4 @@ const catFact = async () => {
   }
 };
 
-catFact();
+generateCatFact();
